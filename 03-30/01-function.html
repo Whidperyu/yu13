@@ -8,8 +8,134 @@
 </head>
 <body>
 <script>
+    // 1.函数声明
+    // a.function关键字
+        // 声明
+        // function abc(){
+        // }
+        // 调用
+        // abc()
+
+    // b.函数表达式（匿名函数）
+        // 声明
+        // var fun = function(){
+
+        // }
+        // 调用
+        // fun()
+    // c.Function构造函数
+        // var fun1 = new Function('x','y','return x+y');
+        // var num = fun1(1,2)
+        // console.log(num);//3
+    // d.函数调用优先于声明  函数声明提升
+        // test();//333 （222被覆盖）
+
+        // function test(){
+        //     console.log(222);
+        // }
+        // function test(){
+        //     console.log(333);
+        // }   
+
+
+    // 2.函数调用
+        // a.函数声明优先于函数调用
+        // function test(){
+        //     console.log(111);
+        // }
+        // test()//111
     
-    // 声明一个函数
+
+    // 3.函数参数
+    // a.形参：函数声明时的参数  
+    //   实参：函数调用时的参数
+        // function add(a,b){
+        //     console.log(a+b)
+        // }
+        // add(1,2)//3
+
+    // b.值传递：传递基本类型的值
+        // function test(num){
+        //     num++;
+        // }
+        // var a = 1;
+        // test(a)
+        // console.log(a);//1
+    // c.引用传递：传递引用类型的值
+        // function test1(num1){
+        //     num1[0]++;
+        // }
+        // var arr = [11];
+        // test1(arr)
+        // console.log(arr);//12
+    // d.arguments
+        // function test(){
+        //    console.log(typeof arguments);//Object
+        //    console.log(arguments);
+        //    arguments[0]
+        //    arguments[1]
+        //    arguments[2]
+        //    arguments[3]
+
+        //     return arguments[0] + arguments[1]
+
+        // }
+        // test(11,22,33,'aa')
+        // var res = test(1,2)
+        // console.log(res);//3
+
+    
+    // 4.函数返回值
+        // return： 在函数体内使用return ，返回函数的执行结果
+        // function add(a,b){
+        //     return a+b
+        // }
+
+
+    // 5.函数的特殊用法
+    // a.作为返回值
+        // function test1(){
+        //     function test2(a,b){
+        //         console.log(111);
+        //         console.log(a+b);
+        //     }
+        //     return test2
+        // }
+        // test1();//此时无返回值，因为test2函数内无返回
+        // test1()(11,22);
+    // b.函数作为参数
+        // function test1(add){
+        //     console.log(111);
+        //     add()
+        // }
+        // function test2(){
+        //     console.log(222);
+        // }
+        // test1(test2)//222
+    // c.立即执行函数
+        // (function test(){
+        //     console.log(123);
+        // })();//123
+
+        // (function test1(){
+        //     console.log(321);
+        // }());//321
+    
+
+    // 6.函数的作用域
+    // 函数执行时所在的作用域，是定义时的作用域，不是调用时所在的作用域。
+        // function fun1(){
+        //     // console.log(a)
+        // }
+        // function fun2(){
+        //     var a = 12;
+        //     console.log(a)
+        //     fun1()
+        // }
+        // fun2()//12
+
+
+    // 1.声明一个函数
     /*
     function test1(num1,num2){
         return num1+num2
@@ -18,11 +144,27 @@
     console.log(res)
     */
 
+    /*
     function test2(num1,num2){
         console.log(num1+num2)    
     }
     var res2 = test2(1,2);//调用，无返回值，返回未定义
     console.log(res2)//undefined
+    */
+
+    /*
+    // 3.函数表达式 声明一个函数
+    var fun = function(num1 , num2){
+        return num1 + num2
+    }
+    var num = fun(11,22)
+    console.log(num);//33
+    */
+
+   
+
+    
+
     
 </script>
 </body>

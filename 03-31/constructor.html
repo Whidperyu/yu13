@@ -9,16 +9,52 @@
 <body>
 <script>
     // 构造函数
-    var Person = function(){
+    // var Person = function(){
         
-    }
-    function Person(){
+    // }
+    // function Person(){
 
-    }
-
+    // }
 
     // 创建一个实例
-    var per = new Person();
+    // var per = new Person();
+
+    // function Person(name,age){
+    //     this.name = name,
+    //     this.age = age
+    // }   
+    // var p1 = new Person('xingchen',22)
+    // var p2 = new Person('lisi',33)
+    // console.log(p1,p2);
+
+    // instanceof 检测引用对象类型
+    // function Person(){
+        
+    // } 
+    
+    // function Animal(){
+        
+    // }
+
+    // var obj1 = new Person()
+    // var obj2 = new Animal()
+    // console.log(obj1 instanceof Person);// true
+    // console.log(obj1 instanceof Animal);// false
+
+    // prototype 函数原型
+    function Animal(){
+        
+    }
+    console.log(typeof Animal.prototype);//object
+    console.log(Animal.prototype);
+
+    Animal.prototype.age = 11
+    var a1 = new Animal()
+    var a2 = new Animal()
+
+    a2.name = 'xing'
+    console.log(a2);
+    console.log(a2.age);//11
 </script>
 </body>
 </html>

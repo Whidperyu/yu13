@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-oriented</title>
+</head>
+<body>
+<script>
+    // object-oriented (OO:面向对象)
+
+
+    // 面向对象方法：
+    // 1.Object.getPrototypeOf() 参数对象原型
+    // var obj1 = {}
+    // var p = Object.getPrototypeOf(obj1)
+    // console.log(p);
+    // console.log(Object.prototype);
+
+    // 空对象的原型是 Object.prototype
+    Object.getPrototypeOf({}) === Object.prototype
+
+    // Object.prototype 的原型是 null
+    var res = Object.getPrototypeOf(Object.prototype)
+    console.log(res);//null
+
+    // 函数的原型是 Function.protope
+    // function f(){}
+    // Object.getPrototypeOf(f) === Function.prototype
+
+    // 2.Object.setPrototypeOf()参数对象设置原型，返回该参数对象。它接受两个参数，第一个是现有对象，第二个是原型对象。
+    // var person = {
+    //     name : 'noname',
+    //     age : 0
+    // } 
+    // var obj2 = {}
+    // Object.setPrototypeOf(obj2,person)
+    // console.log(obj2);
+
+    // 3.Object.create() 创建一个干净的对象
+    // var obj3 = Object.create(null)
+    // var obj0 = {
+    //     name : 'noname',
+    //     age : 0
+    // }
+    // var obj1 = {}
+    // var obj2 = Object.create(obj0)
+    // console.log(obj2);
+
+    // 4.Object.prototype.isPrototypeOf() 判断该对象是否为参数对象的原型
+    // var obj4 = {
+    //     name : 'noname',
+    //     age : 0
+    // }
+    // var obj2 = {}
+    // var p2 = Object.getPrototypeOf(obj2)
+    // console.log(p2.isPrototypeOf(obj2));//true
+
+    // 5.Object.getOwnPropertyNames() 返回一个数组，成员是参数对象本身的所有属性的键名，不包含继承的属性键名
+    // var obj5 = {
+    //     xxx:'xxxXXXXX'
+    // }
+    // var obj1 = Object.create(obj5)
+    // obj1.name = 'xingchen'
+    // console.log(obj1);//{name: "xingchen"}
+
+    // var arr = Object.getOwnPropertyNames(obj1)
+    // console.log(arr);//["name"]
+
+    // 6.Object.prototype.hasOwnProperty() 返回一个布尔值，用于判断某个属性定义在对象自身，还是定义在原型链上
+    var obj6 = {
+        name : 'noname'
+    }
+    console.log(obj6.hasOwnProperty('name'));//true
+    
+
+</script>  
+</body>
+</html>

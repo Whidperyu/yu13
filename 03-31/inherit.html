@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承练习</title>
+</head>
+<body>
+<script>
+    // inherit 继承
+
+    function Animal(){
+        
+    }
+    Animal.prototype.life = 'live'
+    Animal.prototype.name = 'animal'
+
+    function Cat(){
+
+    }
+    Cat.prototype = new Animal()
+    Cat.prototype.leg = 'four'
+
+    function Tiger(){
+
+    }
+    Tiger.prototype = new Cat();
+    Tiger.prototype.name = '虎';
+
+    var p = new Tiger();
+    console.log(p);
+</script>
+</body>
+</html>

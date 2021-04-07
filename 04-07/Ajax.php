@@ -4,6 +4,7 @@ $data = [
     'age' => 11,
     'email' => 'zhuiyue@qq.com'
 ];
+// 解码
 // 将 数组转为 JSON字符串
 echo json_encode($data)
 ?>

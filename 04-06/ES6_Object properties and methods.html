@@ -63,7 +63,6 @@
     // console.log(obj1);
 
     //get方法、set方法 访问器与修改器、取值函数与存值函数
-    // 读属性时触发get方法，写属性时触发set方法
     let obj1 = {
         name: 'xueyue',
         age: '11',
@@ -74,8 +73,8 @@
             console.log('新值为：',v);
         }
     } 
-    obj1.name
-    obj1.name = 'lisa'
+    obj1.name   // 读属性时触发get方法
+    obj1.name = 'lisa'  // 写属性时触发set方法
 
 
 </script>

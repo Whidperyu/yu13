@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>点击按钮显示索引值</title>
+</head>
+<body>
+<input type="button"  value="AAA">
+<input type="button"  value="BBB">
+<input type="button"  value="CCC">
+<input type="button"  value="DDD">
+<input type="button"  value="EEE">
+<script>
+    window.onload = function(){
+        var btn = document.querySelectorAll('input')
+        for(var i=0;i<btn.length;i++){
+            btn[i].index = i;
+            btn[i].onclick = function(){
+                console.log(this.index);
+            }
+        }
+    }
+</script>   
+</body>
+</html>

@@ -1,0 +1,81 @@
+<script>
+    // ES6_对象的属性和方法
+
+    // // 字面量
+    // var obj1 = {
+    //     name : 'manyue',
+    //     age : 10
+    // }
+    // // 构造函数
+    // var obj2 = new Object()
+    // obj2.name = 'lisa'
+    // obj2.sex = 'none'
+
+ 
+    // let name = 'manyue'
+    // let age = 11
+    // let say = ()=>{return 'Hello Es6'}
+
+    // // 对象简写 
+    // let obj3 = {name,age,say}  // {name:'manyue',age:10}
+    // console.log(obj3);
+    // console.log(obj3.say());// Hello Es6 
+
+    // let obj4 = {
+    //     name : 'yibo',
+    //     say : function(){
+    //         console.log(111);
+    //     },
+    //     say2(){
+    //         console.log(222);
+    //     }
+    // }
+    // obj4.say() // 111
+    // // obj4.say2() //222
+
+    // let obj5 = {
+    //     age : 11,
+    //     ['em' + 'ail']: 'wuhu@qq.com'
+    // }
+    // obj5.name = 'wuhu'
+    // Object.defineProperty(obj5,'sex',{
+    //     value: 'f'
+    // })
+    // // let h = 'Hel' + 'lo'      // hello
+    // obj5['hel' + 'lo'] = 'Hello world'  // obj5.hello = 'Hello world'
+    // console.log('obj5:', obj5);
+
+
+
+    // // 扩展用算符...
+    // let person = {
+    //     name : 'fenghua',
+    //     age: 11
+    // }
+    // console.log(person);
+    // // 将 对象person中的所有可枚举属性拷贝到p1中
+    // let p1 = {...person}
+    // console.log(p1);
+
+    // let arr1 = [11,22,33,44,55]
+    // let obj1 = {...arr1}
+    // console.log(arr1);
+    // console.log(obj1);
+
+    //get方法、set方法 访问器与修改器、取值函数与存值函数
+    // 读属性时触发get方法，写属性时触发set方法
+    let obj1 = {
+        name: 'xueyue',
+        age: '11',
+        get name(){
+            console.log('正在读取name属性');
+        },
+        set name(v){
+            console.log('新值为：',v);
+        }
+    } 
+    obj1.name
+    obj1.name = 'lisa'
+
+
+</script>

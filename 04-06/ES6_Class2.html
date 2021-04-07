@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class2</title>
+</head>
+<body>
+<script>
+    class Person {
+
+        // 静态
+        static location = 'Beijing'
+
+        // 构造方法 实例化时自动调用 完成一些初始化的任务
+        constructor(name,age,sex){
+            this.name = name
+            this.age = age
+            this.sex = sex
+        }
+        say(){
+            console.log(this.name + '正在说话')
+        }
+     
+    }
+
+
+    // 声明一个类Asian 继承Person
+    class Asian extends Person {
+        constructor(name,age,sex){
+            super(name,age,sex)
+        }
+        cry(){
+            console.log(this.name + '正在哭');
+        }
+    }
+    // let p1 = new Asian('孔子', 0, 'M')
+    // console.log(p1);
+
+    // p1.say()
+    // p1.cry()
+
+    // 定义一个类
+    class Chinese extends Asian{
+
+    }
+    let p1 = new Chinese('墨子', 88, 'M')
+    console.log(p1);
+    p1.say()
+</script>
+</body>
+</html>

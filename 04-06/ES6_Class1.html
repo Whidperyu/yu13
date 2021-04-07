@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+ <script>
+    //  ES6之前
+    // function Person1(){
+
+    // }
+    // Person1.prototype.name = 'noname'
+    // Person1.prototype.sex = '保密'
+    // Person1.prototype.age = '保密'
+    // Person1.prototype.say = function(){
+    //     console.log('Hello World');
+    // }
+    // var p1 = new Person1()
+    // console.log(p1);
+    // console.log(p1.name);
+    // console.log(p1.sex);
+    // console.log(p1.age);
+    // p1.say()
+
+    // ES6
+    // class Person2 {
+
+    // }
+    // let p2 = new Person2()
+    // let p3 = new Person2()
+    // console.log(p2);
+    // console.log(p3);
+
+
+    class Person {
+
+        // 静态
+        static location = 'Beijing'
+
+        // 构造方法 实例化时自动调用 完成一些初始化的任务
+        constructor(name,age,sex){
+            this.name = name
+            this.age = age
+            this.sex = sex
+        }
+        say(){
+            console.log(this.name + '正在说话')
+        }
+        static cry (){
+            console.log('正在哭');
+        }
+        // 访问器函数 访问name属性时调用
+        // get name(){
+        //     console.log('访问了name属性');
+        // }
+        // set name(v){
+        //     console.log('修改了name属性的值：' + v);
+        // }
+    }
+    // let p1 = new Person('xaioming',0 ,'M')
+    // let p2 = new Person('lisa',1,'F')
+    // p1.name
+    // p1.name = 'lihua'
+    // p1.say()
+    // p2.say()
+
+    // Person.cry()    //类名，静态属性（方法）
+    // console.log(Person.location);   // 访问类的静态属性
+    
+
+
+    // 声明一个类Asian 继承Person
+    class Asian extends Person {
+        constructor(name,age,sex){
+            super()
+        }
+        static color = 'yellow'
+        sleeping(){
+            console.log('正在睡觉');
+        }
+    }
+    let p1 = new Asian('孔子', 0, 'M')
+    console.log(p1);
+ </script>   
+</body>
+</html>

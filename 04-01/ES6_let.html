@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+<script>
+    // 1.let命令
+    // 使用var声明的变量 与 使用let声明的变量
+    // console.log(window.a);// undefined
+    // var a = 123;
+    // console.log(window.a);// 123
+
+    // console.log(window.a);// undefined
+    // let a = 123;
+    // console.log(window.a);// undefined
+
+    // 2.解构赋值
+    // 数组赋值
+    // let[a,b,c] = [1,2,3]
+    // console.log(a,b,c);// 1 2 3
+
+    // 对象赋值
+    // let obj = {
+    //     name: "星沉",
+    //     age: 22,
+    //     tell: '18237222273'
+    // }
+    // 使用与对象属性名一致的变量名
+    // let {name,age,tell} = obj
+    // console.log(name,age,tell);// 星沉 22 18237222273
+    // 使用别名
+    // let {name:n,age:a,tell:t} = obj
+    // console.log(n,a,t);// 星沉 22 18237222273
+
+    // 3.字符串
+    // let str1 = 'pianaichuchen'
+    // let str2 = 'butisxiangxiang'
+    // console.log(str1.length);// 13
+    // console.log(str2.length)// 15
+    // console.log(str1[0])// p
+    // console.log(str2[0])// b
+    // \u{xxxx}
+
+    // 模板字符串
+    let name = 'chen'
+    let age1 = 22
+    let age2 = 17
+    // 使用 反引号``
+    let str = `姓名：${name},年龄：${age1}`
+    console.log(str); // 姓名：chen,年龄：22
+
+    let str1 = `a: ${age1 + age2},b:${age1 + age2}`
+    console.log(str1); // a:39,b:39
+
+    // 字符串方法
+    // indexOf | lastIndexOf()
+    // var str1 = 'hello world'
+    // console.log(str1.indexOf('o'));//4
+    // console.log(str1.lastIndexOf('o'));//7
+
+    // includes() | includes() | endsWith()
+    // includes()：返回布尔值，表示是否找到了参数字符串。
+    // startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+    // endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+    // console.log(str1.includes('o'));// true
+    // console.log(str1.startsWith('o'));//false
+    // console.log(str1.endsWith('o'));//false
+
+
+    // console.log('x'.repeat(3)); // "xxx" 
+    // console.log('hello'.repeat(2)); // "hellohello" 
+    // console.log('na'.repeat(0)); // ""
+
+
+    //trimStart()消除字符串头部的空格
+    //trimEnd()消除尾部的空格
+
+</script>
+</body>
+</html>

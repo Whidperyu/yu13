@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set、Map</title>
+</head>
+<body>
+<script>
+    // // Set
+    // let s1 = new Set()
+    // // console.log(Set.prototype);
+    // s1.add(11)
+    // s1.add(99)
+    // s1.add(333)
+    // s1.add(222)
+    // console.log(s1.has(333));// true
+    // console.log(s1);
+
+    // // 键(key)值(value)对
+    // let arr1 = ['aa','bb','cc','dd','cc']
+    // let obj1 = {
+    //     name: 'zhangsan',
+    //     age: '3',
+    //     sex: 'none'
+    // }
+    // let s1 = new Set([11,22,33,44])
+    // console.log(s1.keys());
+    // console.log(s1.values());
+    // console.log(s1.entries());
+    // s1.forEach(function(k,v){
+    //     console.log(k,v);
+    // })
+
+    // Map
+    console.log(Map.prototype);
+    let o1 = {
+        type : 'human'
+    }
+    let o2 = {
+        type : 'animal'
+    }
+    let m1 = new Map()
+    m1.set(o1,'人类')
+    m1.set(o2,'动物')
+    console.log(m1);
+    // Map 的属性和方法
+    console.log(m1.set());
+
+    
+</script>
+</body>
+</html>

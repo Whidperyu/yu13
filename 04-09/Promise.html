@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>使用Promise获取四位密码</title>
 </head>
 <body>
 <script src="../jquery.js"></script>
 <script>
+    let pass = []   // 保存密码
     new Promise(function(resolve,reject){
 
         $.ajax({
@@ -14,13 +15,14 @@
             type: 'get',   // 请求方法 get  post ...
             // dataType: 'json',
             success: function(data){    // 请求成功之后的 处理函数
-                // console.log('第一位密码:',data);
-                resolve(data)
+                console.log('第一位密码:',data);
+                pass.push(data)
+                resolve(pass)
             }
         })
 
     }).then(function(d){
-        console.log('接收到第一步的结果：',d);
+        // console.log('接收到第一步的结果：',d);
         return new Promise(function(resolve,reject){
 
             $.ajax({
@@ -28,14 +30,15 @@
                 type: 'get',   // 请求方法 get  post ...
                 // dataType: 'json',
                 success: function(data){    // 请求成功之后的 处理函数
-                    // console.log('第二位密码:',data);
-                    resolve(data)
+                    console.log('第二位密码:',data);
+                    pass.push(data)
+                    resolve(pass)
                 }
             })
         })
 
     }).then(function(d){
-        console.log('接收到第二步的结果：',d);
+        // console.log('接收到第二步的结果：',d);
         return new Promise(function(resolve,reject){
 
             $.ajax({
@@ -43,14 +46,15 @@
                 type: 'get',   // 请求方法 get  post ...
                 // dataType: 'json',
                 success: function(data){    // 请求成功之后的 处理函数
-                    // console.log('第三位密码:',data);
-                    resolve(data)
+                    console.log('第三位密码:',data);
+                    pass.push(data)
+                    resolve(pass)
                 }
             })
         })
 
     }).then(function(d){
-        console.log('接收到第三步的结果：',d);
+        // console.log('接收到第三步的结果：',d);
         return new Promise(function(resolve,reject){
 
             $.ajax({
@@ -58,14 +62,15 @@
                 type: 'get',   // 请求方法 get  post ...
                 // dataType: 'json',
                 success: function(data){    // 请求成功之后的 处理函数
-                    // console.log('第四位密码:',data);
-                    resolve(data)
+                    console.log('第四位密码:',data);
+                    pass.push(data)
+                    resolve(pass)
                 }
             })
         })
     }).then(function(d){
-        console.log('接收到第四步的结果：',d);
-        console.log('最终的密码：' + '');
+        // console.log('接收到第四步的结果：',d);
+        console.log('最终的密码：' + d);
     })
 </script>
 </body>

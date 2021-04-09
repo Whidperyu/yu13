@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script src="../jquery.js"></script>
+<script>
+    new Promise(function(resolve,reject){
+
+        $.ajax({
+            url: 'http://vue.api.comcto.com/api/password1.php',    // 要请求的接口地址
+            type: 'get',   // 请求方法 get  post ...
+            // dataType: 'json',
+            success: function(data){    // 请求成功之后的 处理函数
+                // console.log('第一位密码:',data);
+                resolve(data)
+            }
+        })
+
+    }).then(function(d){
+        console.log('接收到第一步的结果：',d);
+        return new Promise(function(resolve,reject){
+
+            $.ajax({
+                url: 'http://vue.api.comcto.com/api/password2.php',    // 要请求的接口地址
+                type: 'get',   // 请求方法 get  post ...
+                // dataType: 'json',
+                success: function(data){    // 请求成功之后的 处理函数
+                    // console.log('第二位密码:',data);
+                    resolve(data)
+                }
+            })
+        })
+
+    }).then(function(d){
+        console.log('接收到第二步的结果：',d);
+        return new Promise(function(resolve,reject){
+
+            $.ajax({
+                url: 'http://vue.api.comcto.com/api/password3.php',    // 要请求的接口地址
+                type: 'get',   // 请求方法 get  post ...
+                // dataType: 'json',
+                success: function(data){    // 请求成功之后的 处理函数
+                    // console.log('第三位密码:',data);
+                    resolve(data)
+                }
+            })
+        })
+
+    }).then(function(d){
+        console.log('接收到第三步的结果：',d);
+        return new Promise(function(resolve,reject){
+
+            $.ajax({
+                url: 'http://vue.api.comcto.com/api/password4.php',    // 要请求的接口地址
+                type: 'get',   // 请求方法 get  post ...
+                // dataType: 'json',
+                success: function(data){    // 请求成功之后的 处理函数
+                    // console.log('第四位密码:',data);
+                    resolve(data)
+                }
+            })
+        })
+    }).then(function(d){
+        console.log('接收到第四步的结果：',d);
+        console.log('最终的密码：' + '');
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侦听器-watch</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            ASK a yes/no question:
+            <input v-model = 'question'>
+        </p>
+        <p>{{answer}}</p>
+    </div>
+    <script src="../vue.2.6.12.js"></script>
+    <script src="../axios.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                question : '',
+                answer: 'I cannot give you an answer until you ask a question!'
+            },
+            watch: {
+                question(nv,ol){
+                    // console.log(this);
+                    let self = this
+                    this.answer = '正在接收接口数据...' 
+                    // 接收远程接口的数据   异步执行
+                    axios.get('http://vue.api.comcto.com/api/password1.php').then(function(res){
+                        
+                        console.log('接口返回的数据',res.data);
+                        if(res.data == 1){
+                            self.answer = '大吉'
+                        }else{
+                            self.answer = '大熊'
+                        }
+                    })
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>

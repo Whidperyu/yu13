@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind指令</title>
+    <script src="../vue.2.6.12.js"></script>
+</head>
+<body>
+<div id="app">
+    <img v-bind:src="boy" v-bind:title = 'aboy' alt="">
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            boy: '../zi.jpg',
+            aboy: '一个男孩'
+        }
+    })
+</script>    
+</body>
+</html>

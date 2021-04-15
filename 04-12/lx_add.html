@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两数相加</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model = 'num1'>
+        <button id="and">+</button>
+        <input type="text" v-model = 'num2'>
+        <button v-on:click="add">=</button>
+        <input type="text" v-model = 'result'>
+    </div>
+    <script src="../vue.2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num1: '',
+                num2: '',
+                result: ''
+            },
+            methods: {
+                add:function(){
+                    this.result = parseInt(this.num1) + parseInt(this.num2)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

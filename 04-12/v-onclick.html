@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-onclick</title>
+    <script src="../vue.2.6.12.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button>点击1</button>
+        <button v-on:click = 'hello'>点击2</button>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            methods:{
+                hello(){
+                    alert('Hi')
+                },
+                // methods
+            }
+        })
+    </script>
+</body>
+</html>

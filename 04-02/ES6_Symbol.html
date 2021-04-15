@@ -8,7 +8,46 @@
 </head>
 <body>
 <script>
-    
+    // let obj1 = {
+    //     name : "张三",
+    //     age: 22,
+    //     sex: "X",
+    //     email: "zhangsan@qq.com",
+    // }
+
+    // let obj2 = {
+    //     name: "zhangsan",
+    //     age: 22,
+    //     sex: "M"
+    // }
+
+    // let s = Symbol()
+    // console.log(s);
+    // console.log(typeof s);
+
+    // let str = 'abcdef'
+    // console.log(typeof str);
+
+    let obj1 = {
+        [Symbol('name')] : "张三",
+        [Symbol('age')]: 22,
+        [Symbol('sex')]: "X",
+        [Symbol('email')]: "zhangsan@qq.com",
+    }
+    let obj2 = {
+        [Symbol('name')]: "zhangsan",
+        [Symbol('age')]: 11,
+        [Symbol('sex')]: "M"
+    }
+    for(k in obj2){
+        obj1[k] = obj2[k]
+    }
+
+    let o = Object.assign(obj1,obj2)
+    console.log(o);
+    console.log('obj1',obj1);
+    console.log('obj2',obj2);
+
 </script>   
 </body>
 </html>
